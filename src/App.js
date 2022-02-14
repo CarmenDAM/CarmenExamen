@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Menu from './components/Menu';
 import { Ejercicios } from './data/Ejercicios';
 
 export default function App() {
