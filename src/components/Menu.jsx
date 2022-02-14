@@ -62,4 +62,4 @@ class Navegacion extends React.Component {
     );
   }
 }
-export default Navegacion;
+export default Menu;
