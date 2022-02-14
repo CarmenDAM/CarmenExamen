@@ -13,7 +13,7 @@ import {
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-class Navegacion extends React.Component {
+class Menu extends React.Component {
   constructor(props) {
     super(props);
   }
