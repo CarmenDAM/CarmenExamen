@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import {
   Navbar,
   Container,
@@ -6,7 +8,10 @@ import {
   Nav,
   FormControl,
   Button,
+  Offcanvas
 } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import {MenuItems} from '../data/MenuItems';
 
 
 class Menu extends React.Component {
@@ -16,44 +21,32 @@ class Menu extends React.Component {
 
   render() {
     return (
-      <Navbar bg="light" expand={false}>
-  <Container fluid>
-    <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
-    <Navbar.Toggle aria-controls="offcanvasNavbar" />
-    <Navbar.Offcanvas
-      id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel"
-      placement="end"
-    >
-      <Offcanvas.Header closeButton>
-        <Offcanvas.Title id="offcanvasNavbarLabel">Offcanvas</Offcanvas.Title>
-      </Offcanvas.Header>
-      <Offcanvas.Body>
-        <Nav className="justify-content-end flex-grow-1 pe-3">
-          <Nav.Link href="#action1">Home</Nav.Link>
-          <Nav.Link href="#action2">Link</Nav.Link>
-          <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action5">
-              Something else here
-            </NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-        <Form className="d-flex">
-          <FormControl
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
+      <Navbar collapseOnSelect expand="lg" bg="light">
+      <Container>
+        <Navbar.Brand>
+          <img
+            className="logo-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/45px-React.svg.png"
           />
-          <Button variant="outline-success">Search</Button>
-        </Form>
-      </Offcanvas.Body>
-    </Navbar.Offcanvas>
-  </Container>
-</Navbar>
+          <i className="fas fa-user-graduate" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="justify-content-end"
+        >
+          <Nav>
+              {MenuItems.map((item) => {
+                return (
+                  <Nav.Link as={Link} to={item.path}>
+                    {item.title}
+                  </Nav.Link>
+                );
+              })}
+            </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     );
   }
 }

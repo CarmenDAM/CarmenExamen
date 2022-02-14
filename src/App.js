@@ -6,7 +6,7 @@ import {MenuItems} from './data/MenuItems';
 export function App() {
   return (
     <Router>
-      <Menu/>
+      <Menu />
       {MenuItems.map((item) => {
         return (
           <Route
