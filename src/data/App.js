@@ -16,7 +16,7 @@ export default function App() {
             exact
             component={item.component}
           />
-        );
+        ); 
       })}
     </Router>
   );
