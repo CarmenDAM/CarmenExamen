@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Libro from './Libro';
+
 
 class FormularioEj2 extends React.Component {
   constructor(props) {

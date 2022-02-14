@@ -1,13 +1,13 @@
 import React from 'react';
 import './style.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navegacion from './components/Navegacion';
-import  {Ejercicios}  from './data/Ejercicios';
+import Menu from './components/Menu';
+import { Ejercicios } from './data/Ejercicios';
 
 export default function App() {
   return (
     <Router>
-      <Navegacion />
+      <Menu />
       {Ejercicios.map((item) => {
         return (
           <Route
