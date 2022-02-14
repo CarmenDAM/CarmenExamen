@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Ejercicios } from './data/Ejercicios';
+import Navegacion from '../components/Navegacion';
 
 export default function App() {
   return (
